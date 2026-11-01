@@ -55,6 +55,17 @@ Cite apenas o que for pertinente ao caso. Ao citar dispositivo legal ou norma t�
 
 ## Fluxo de trabalho
 
+### 0. Caderno do caso (sempre, ao iniciar)
+
+Ao iniciar a skill, siga `references/caderno-do-caso.md`:
+
+1. Verifique se a pasta do caso tem `Caderno do caso/00 Índice.md`.
+2. **Se não existir**, crie o caderno com a estrutura padrão, popule-o com os fatos dos documentos já presentes na pasta (cada um com fonte e situação) e crie ou atualize o `CLAUDE.md` da pasta com a instrução de ler e atualizar o caderno em toda sessão. Se o diretório não for a pasta de um caso, pergunte antes de criar.
+3. **Se existir**, leia `00 Índice.md`, `Fatos.md` e `Pendências.md` antes de responder e confira se o `CLAUDE.md` tem a seção do caderno. A triagem abaixo parte do que já está no caderno e pergunta só o que falta.
+4. **A cada interação** que trouxer fato, evidência, hash, diligência, decisão de método ou reunião nova, atualize as notas afetadas e a data de "Última atualização" antes de encerrar a resposta, e diga em uma linha o que foi registrado.
+
+O caderno é o mesmo usado pela skill `advogado-geral`. Laudos e pareceres citam fatos do caderno, nunca só da memória, e mantêm a distinção entre Documento, Declaração e Exame.
+
 ### 1. Triagem (sempre)
 Antes de redigir, levante e confirme:
 - Papel (perito judicial, assistente técnico, extrajudicial) e destinatário do texto.
@@ -149,3 +160,8 @@ Limites: não use enquadramentos enganosos, omissão seletiva, urgência artific
 - Introdução e conclusão em linguagem jurídica; desenvolvimento em linguagem técnica.
 - Sem travessões; fonte Arial.
 - Lembrete ao usuário: revisar e assumir a autoria técnica antes de assinar.
+- Caderno do caso atualizado: fatos citados no texto existem em `Fatos.md`, a entrega foi registrada e a data de "Última atualização" mudou.
+
+## Referências
+
+- `references/caderno-do-caso.md`: verificação, criação e atualização do caderno do caso e da instrução no `CLAUDE.md`.

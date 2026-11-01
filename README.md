@@ -34,6 +34,7 @@ Antes de começar, a skill identifica em qual papel o pedido se enquadra. A post
 
 ## Fluxo de trabalho
 
+0. **Caderno do caso:** verifica se a pasta do caso tem `Caderno do caso/`. Se não tiver, cria o caderno, registra os fatos dos documentos já presentes e cria ou atualiza o `CLAUDE.md` para que toda sessão leia e atualize o caderno. Se tiver, lê antes de responder e atualiza a cada interação. Protocolo em `references/caderno-do-caso.md`, compartilhado com a skill `advogado-geral`.
 1. **Triagem:** papel, processo, objeto da perícia, quesitos, evidências recebidas, diligências já feitas e ponto controvertido.
 2. **Plano de análise:** método específico para dispositivos, mensagens e redes sociais, software e código-fonte, ou fraudes e assinaturas digitais.
 3. **Cadeia de custódia:** origem, recebimento, manuseio, armazenamento, hashes e quebras registradas.
@@ -48,12 +49,13 @@ A skill manda verificar a vigência e a redação atual antes de qualquer citaç
 
 ## Instalação
 
-Copie o arquivo `SKILL.md` para a pasta de skills do Claude:
+Clone o repositório na pasta de skills do Claude:
 
 ```bash
-mkdir -p ~/.claude/skills/perito-computacao-forense
-cp SKILL.md ~/.claude/skills/perito-computacao-forense/
+git clone https://github.com/fabiocranchi/skill-perito-computacao-forense.git ~/.claude/skills/perito-computacao-forense
 ```
+
+Ou copie `SKILL.md` e a pasta `references/` para `~/.claude/skills/perito-computacao-forense/`.
 
 No Windows (Git Bash), o caminho equivalente é `~/.claude/skills/perito-computacao-forense/`, dentro da pasta do seu usuário.
 
